@@ -1,13 +1,12 @@
 import React from 'react'
-import Calculator from './Calculator.jsx'
-import './Calculator.css'
+import Fetch from './Files/Fetch.jsx'
 
 const App = () => {
   return (
     <div>
       <center>
-        <h1>Calculator</h1>
-        <Calculator/>
+        <h1>Fetching</h1>
+        <Fetch/>
       </center>
       
     </div>
