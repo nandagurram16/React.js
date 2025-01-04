@@ -1,12 +1,13 @@
 import React from 'react'
-import Validationform from './Validationform.jsx'
-
+import Calculator from './Calculator.jsx'
+import './Calculator.css'
 
 const App = () => {
   return (
     <div>
       <center>
-        <Validationform/>
+        <h1>Calculator</h1>
+        <Calculator/>
       </center>
       
     </div>
