@@ -1,12 +1,12 @@
 import React from 'react'
-import Fetch from './Files/Fetch.jsx'
+import Axios from './Files/Axios.jsx'
 
 const App = () => {
   return (
     <div>
       <center>
-        <h1>Fetching</h1>
-        <Fetch/>
+        <h1>Axios</h1>
+        <Axios/>
       </center>
       
     </div>
