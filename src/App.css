@@ -1,5 +1,5 @@
-
-h1{
+/* calculator */
+/* h1{
     color: purple;
     background-color: rgb(226, 226, 127);
     padding: 50px;
@@ -8,4 +8,20 @@ h1{
 
 .container{
     margin: 10px;
+} */
+
+/* ============================ */
+
+/* Router */
+
+ul{
+    display: flex;
+    margin-left: 10cm;
+    justify-content: space-around;
+    margin-right:10cm;
+}
+
+
+a{
+    text-decoration: none;
 }
