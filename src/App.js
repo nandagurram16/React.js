@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Audio from './Files/Audio.jsx'
+import Video from './Files/Video.jsx'
 
 const App = () => {
   return (
     <div>
       <center>
-        <Audio/>
+        <Video/>
       </center>
     </div>
   )
