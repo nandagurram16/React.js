@@ -1,11 +1,12 @@
 import React from 'react'
-import Image from './Files/Image.jsx'
+
+import Audio from './Files/Audio.jsx'
 
 const App = () => {
   return (
     <div>
       <center>
-        <Image/>
+        <Audio/>
       </center>
     </div>
   )
