@@ -1,23 +1,25 @@
-import React from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
-
-
+import React from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const About = () => {
+  // Get the name parameter from the URL
+  const { name } = useParams();
+  
+  // useNavigate hook for navigation
+  const navigate = useNavigate();
 
-let navigate = useNavigate()
+  const handleClick = () => {
+    navigate('/dashboard'); // Navigate to dashboard
+  };
 
-const handleclick =()=>{
-  navigate('/dashboard')
-}
   return (
     <div>
-        <center>
-        <h1>Welcome to About</h1>
-        <button onClick={handleclick}>Login</button>
+      <center>
+        <h1>Welcome to About: {name}</h1> {/* Display name */}
+        <button onClick={handleClick}>Login</button>
       </center>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
