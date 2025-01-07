@@ -1,12 +1,16 @@
 import React from 'react'
 
-import Video from './Files/Video.jsx'
+import CompB from './Components/CompB.jsx'
 
+export const usercontext = React.createContext()
 const App = () => {
   return (
     <div>
       <center>
-        <Video/>
+        <usercontext.Provider value={'sending data to compb'}>
+          <CompB/>
+        </usercontext.Provider>
+        
       </center>
     </div>
   )
