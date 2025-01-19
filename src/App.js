@@ -1,12 +1,12 @@
 import React from 'react'
-import Bootstrap from './Files/Bootstrap.jsx'
+import Image from './Files/Image.jsx'
 
 
 const App = ({count}) => {
   return (
     <div>
       <center>
-        <Bootstrap/>
+        <Image/>
       </center>
     </div>
   )
