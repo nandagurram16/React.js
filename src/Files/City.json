@@ -1,0 +1,45 @@
+[
+    {
+       "id":"1",
+       "name":"karnataka" 
+    },
+
+    {
+        "id":"2",
+        "name":"andhra" 
+     },
+
+     {
+        "id":"3",
+        "name":"madyapradesh" 
+     },
+
+     {
+        "id":"4",
+        "name":"bhopal" 
+     },
+     {
+        "id":"5",
+        "name":"nepal" 
+     },
+     {
+        "id":"6",
+        "name":"nagpur" 
+     },
+     {
+        "id":"7",
+        "name":"manipur" 
+     }, {
+        "id":"1",
+        "name":"kerala" 
+     },
+     {
+        "id":"1",
+        "name":"chennai" 
+     },
+     {
+        "id":"1",
+        "name":"haryana" 
+     }
+
+]

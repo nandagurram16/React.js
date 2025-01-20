@@ -1,12 +1,13 @@
 import React from 'react'
-import Image from './Files/Image.jsx'
 
 
 const App = ({count}) => {
   return (
     <div>
       <center>
-        <Image/>
+      <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
       </center>
     </div>
   )
