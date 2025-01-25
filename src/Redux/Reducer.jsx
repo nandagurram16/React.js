@@ -1,18 +1,13 @@
+const count = 0
 
-const initialstate = 0
-
-function countreducer(state = initialstate , action){
-
-    const{type ,payload} = action;
-
+export default function reducer (state =count,action){
+    const {type,payload} = action;
     switch (type){
-        case "Increment":
-            return state+1;
-            case "decrement":
-                return state-1;
+        case 'increment':
+            return count+1;
+            case 'decrement':
+                return count-1;
                 default:
-                    return state
+                    return count;
     }
 }
-
-export default countreducer
