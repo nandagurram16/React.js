@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { store } from '../App.js'
 
 const CompA = () => {
+
+  const [data, setdata] = useState(store)
   return (
     <div>
-      ComponentA
+      Comp A{data}
     </div>
   )
 }

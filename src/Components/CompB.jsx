@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {store} from '../App.js'
 
-import { usercontext } from '../App.js'
 
 const CompB = () => {
+
+  const[data,setdata] = useState(store)
   return (
     <div>
-        <usercontext.Consumer>
-            {value => <div>{value}</div>}
-        </usercontext.Consumer>
+        Comp B{data}
     </div>
   )
 }

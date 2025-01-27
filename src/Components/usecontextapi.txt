@@ -1,0 +1,25 @@
+import React, { createContext, useState } from 'react'
+import CompA from './Components/CompA.jsx';
+import CompB from './Components/CompB.jsx';
+
+export const store = createContext();
+
+const App = () => {
+
+  const [data,setdata] = useState(0);
+  return (
+    <div>
+      <store.Provider value={[data,setdata]}>
+        <center>
+          <CompA/>
+          <CompB/>
+          <button onClick={() => setdata(data+1)}>increment</button>
+          <button onClick={() => setdata(data-1)}>deccrement</button>
+        </center>
+      </store.Provider>
+    </div>
+  )
+}
+
+export default App
+
