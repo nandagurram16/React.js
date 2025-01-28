@@ -1,11 +1,11 @@
 import React from 'react'
+import Errorbodar from './Files/Errorbodar.jsx'
 
 const App = () => {
   return (
-    <>
-    <center>
-    </center>
-    </>
+    <div>
+      <Errorbodar/>
+    </div>
   )
 }
 
