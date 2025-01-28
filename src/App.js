@@ -1,35 +1,24 @@
-import React, { createContext, useState } from 'react'
-import Display from './Components/Display.jsx';
-import Count from './Components/Count.jsx';
-
-export const store = createContext();
+import React from 'react'
+import { useMemo } from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
 const App = () => {
 
-  const [data,setdata] = useState([
-    {
-      model:'Nokia'
-    },
+  const [effect,seteffect] = useState(0)
+  const [memo,setmemo] = useState(0)
 
-    {
-      model:'mi'
-    },
-
-    {
-      model:'oppo'
-    }
-  ]);
+  useEffect(() =>{console.log('from useeffect'+effect)},[effect])
+  useMemo(() =>{console.log('from memo'+memo)},[memo])
   return (
-    <div>
-      <store.Provider value={[data,setdata]}>
-        <center>
-          <Count/>
-          <Display/>
-        </center>
-      </store.Provider>
-    </div>
+    <>
+    <center>
+      <button onClick={() => seteffect(effect+1)}>useeffect increment</button>
+      <br/>
+      <button onClick={() => setmemo(memo+1)}>usememo increment</button>
+    </center>
+    </>
   )
 }
 
 export default App
-
