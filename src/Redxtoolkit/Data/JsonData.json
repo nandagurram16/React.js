@@ -1,0 +1,57 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name":"Samsung Galaxy M33",
+            "src":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/c/3/d/-original-imagdc8mjnhxbgxj.jpeg?q=70",
+            "price":23999
+        },
+
+        {
+           "id":2,
+            "name":"SAMSUNG Galaxy A14 5G (Dark Red, 128 GB)",
+            "src":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/y/c/-original-imah4sssdf9pgz3e.jpeg?q=70",
+            "price":20999 
+        },
+
+        {
+            "id":3,
+            "name":"SAMSUNG Galaxy S24 Ultra 5G (Titanium Violet, 512 GB)",
+            "src":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/w/5/h/-original-imahyvnuta2aadbw.jpeg?q=70",
+            "price":103999
+        },
+
+        {
+            "id":4,
+            "name":"Xiaomi 14 CIVI (Aqua Blue, 512 GB)",
+            "src":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/o/k/v/-original-imah34gxnuk2n2ek.jpeg?q=70",
+            "price":23999
+        },
+
+        {
+            "id":5,
+            "name":"Apple iPhone 15 (Black, 128 GB)",
+            "src":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/d/9/-original-imagtc2qzgnnuhxh.jpeg?q=70",
+            "price":59999
+        },
+
+        {"id":6,
+            "name":"BlackBerry Q10 (Black, 16 GB)",
+            "src":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/l/v/o/q10-sqn-100-1-blackberry-original-imah6sy8yzxxgubr.jpeg?q=70",
+            "price":16020
+        },
+
+        {"id":7,
+            "name":"Nokia G42 5G (So Grey, 128 GB)",
+            "src":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/1/a/u/g42-5g-ta-1586-ds-nokia-original-imah54f6y2cgmauy.jpeg?q=70",
+            "price":10999
+        },
+
+        {"id":8,
+            "name":"OPPO K12x 5G with 45W SUPERVOOC Charger In-The-Box (Midnight Violet, 128 GB)",
+            "src":"https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/s/m/0/-original-imah37gw2wv2ayrf.jpeg?q=70",
+            "price":11999
+        }
+        
+    ]
+}

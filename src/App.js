@@ -1,11 +1,13 @@
 import React from 'react'
-import Errorbodar from './Files/Errorbodar.jsx'
+import Navbar from './Redxtoolkit/Navbar.jsx'
+import Products from './Redxtoolkit/Products.jsx'
 
 const App = () => {
   return (
-    <div>
-      <Errorbodar/>
-    </div>
+    <>
+    <Navbar/>
+    <Products/>
+    </>
   )
 }
 
