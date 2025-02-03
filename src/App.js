@@ -1,12 +1,16 @@
-import React from 'react'
-import Navbar from './Redxtoolkit/Navbar.jsx'
-import Products from './Redxtoolkit/Products.jsx'
+import React, { useState } from 'react'
 
-const App = () => {
+function App() {
+
+  const [count,setcont] = useState(0)
+
+  function inner(){
+    setcont (count+1)
+  }
   return (
     <>
-    <Navbar/>
-    <Products/>
+    <h1>count: {count}</h1>
+    <button onClick={inner}>iam conter</button>
     </>
   )
 }
