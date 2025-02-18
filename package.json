@@ -6,9 +6,12 @@
   "dependencies": {
     "@redux-devtools/extension": "^3.3.0",
     "@reduxjs/toolkit": "^2.5.1",
+    "@shadcn/ui": "^0.0.4",
     "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
+    "framer-motion": "^12.3.1",
+    "lucide-react": "^0.474.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",
     "react-devtools": "^6.0.1",

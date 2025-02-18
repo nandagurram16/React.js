@@ -1,0 +1,118 @@
+import React, { useState } from 'react';
+import './App.css';  // The CSS file
+
+const ChildBox = ({ position, color, text }) => {
+  return (
+    <div className={`child-box ${position}`} style={{ backgroundColor: color }}>
+      {text}
+    </div>
+  );
+};
+
+const App = () => {
+  const [isRotating, setIsRotating] = useState(false);
+
+  const toggleRotation = () => {
+    setIsRotating(!isRotating);
+  };
+
+  return (
+    <div className={`parent-box ${isRotating ? 'rotating' : ''}`}>
+      <ChildBox position="top-left" color="red" text="Red" />
+      <ChildBox position="top-right" color="green" text="Green" />
+      <ChildBox position="bottom-right" color="blue" text="Blue" />
+      <ChildBox position="bottom-left" color="yellow" text="Yellow" />
+
+      <button onClick={toggleRotation} className="rotate-btn">
+        Rotate
+      </button>
+    </div>
+  );
+};
+
+export default App;
+=========================================================
+//App.css
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.parent-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+}
+
+.child-box {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: transform 1s ease;
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.rotate-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.rotate-btn:hover {
+  background-color: #45a049;
+}
+
+@keyframes rotateBoxes {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.parent-box.rotating {
+  animation: rotateBoxes 4s linear infinite;
+}
