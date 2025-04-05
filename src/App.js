@@ -1,11 +1,11 @@
 import React from 'react'
-function App() {
-    
-    return (
-        <>
-        <h1>nanda</h1>
-        </>
-    )
+import Calculator from './REACT/Calculator.jsx'
+const App = () => {
+  return (
+    <div>
+      <Calculator/>
+    </div>
+  )
 }
 
 export default App
