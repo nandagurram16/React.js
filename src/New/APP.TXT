@@ -1,0 +1,22 @@
+import React from 'react'
+import Navbar from './New/Navbar.jsx'
+import { BrowserRouter, Route, Routes,} from 'react-router-dom'
+import Home from './New/Home.jsx'
+import Dashboard from './New/Dashboard.jsx'
+import About from './New/About.jsx'
+const App = () => {
+  return (
+    <div>
+      <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path='/' exact Component={Home}></Route>
+        <Route path='/dashboard/:name' exact Component={Dashboard}></Route>
+        <Route path='/about' exact Component={About}></Route>
+      </Routes>
+      </BrowserRouter>
+    </div>
+  )
+}
+
+export default App
