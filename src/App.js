@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Method from './LifeCyle/Method.jsx'
 
-const App = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <center>
+          <Method/>
+        </center>
+      </div>
+    )
+  }
 }
-
-export default App
