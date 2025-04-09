@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
-import Method from './LifeCyle/Method.jsx'
+import React from 'react'
+import Wheater from './Projects/Wheater.jsx'
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <center>
-          <Method/>
-        </center>
-      </div>
-    )
-  }
+const App = () => {
+  return (
+    <div><center>
+      <Wheater/>
+      </center>
+    </div>
+  )
 }
+
+export default App
