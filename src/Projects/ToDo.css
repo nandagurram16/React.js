@@ -1,0 +1,14 @@
+
+
+input[type='submit']{
+    background-color: greenyellow;
+    border-radius: 5px;
+}
+
+button{
+    background-color: rgb(148, 17, 17);
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}

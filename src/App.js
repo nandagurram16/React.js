@@ -1,10 +1,11 @@
 import React from 'react'
-import Wheater from './Projects/Wheater.jsx'
+import ToDo from './Projects/ToDo.jsx'
 
 const App = () => {
   return (
-    <div><center>
-      <Wheater/>
+    <div>
+      <center>
+        <ToDo/>
       </center>
     </div>
   )
