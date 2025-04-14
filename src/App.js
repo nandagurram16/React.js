@@ -1,11 +1,11 @@
 import React from 'react'
-import ToDo from './Projects/ToDo.jsx'
+import Otp from './Projects/Otp.jsx'
 
 const App = () => {
   return (
     <div>
       <center>
-        <ToDo/>
+        <Otp/>
       </center>
     </div>
   )
