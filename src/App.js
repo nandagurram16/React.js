@@ -1,11 +1,11 @@
 import React from 'react'
-import Otp from './Projects/Otp.jsx'
+import Dropdown from './Projects/Dropdown.jsx'
 
 const App = () => {
   return (
     <div>
       <center>
-        <Otp/>
+        <Dropdown/>
       </center>
     </div>
   )
