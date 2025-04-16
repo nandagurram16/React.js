@@ -1,11 +1,11 @@
 import React from 'react'
-import Dropdown from './Projects/Dropdown.jsx'
+import TrafficLight from './Projects/TrafficLight.jsx'
 
 const App = () => {
   return (
     <div>
       <center>
-        <Dropdown/>
+      <TrafficLight/>
       </center>
     </div>
   )
