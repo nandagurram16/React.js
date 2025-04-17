@@ -1,10 +1,9 @@
 import React from 'react'
-import Otp from './Projects/Otp.jsx'
-
+import ToDo from './Projects/ToDo.jsx'
 const App = () => {
   return (
     <div>
-        <Otp/>
+      <ToDo/>
     </div>
   )
 }
