@@ -1,12 +1,10 @@
 import React from 'react'
-import TrafficLight from './Projects/TrafficLight.jsx'
+import Otp from './Projects/Otp.jsx'
 
 const App = () => {
   return (
     <div>
-      <center>
-      <TrafficLight/>
-      </center>
+        <Otp/>
     </div>
   )
 }

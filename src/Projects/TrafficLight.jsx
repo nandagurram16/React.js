@@ -2,39 +2,38 @@ import React, { useState, useEffect } from 'react';
 import './TrafficLight.css';
 
 const TrafficLight = () => {
-  const [currentLight, setCurrentLight] = useState('red');
 
-  useEffect(() => {
-    let timeout;
+    const [light,setlight] = useState('red')
 
-    const changeLight = () => {
-      setCurrentLight((prevLight) => {
-        if (prevLight === 'red') return 'green';
-        if (prevLight === 'green') return 'yellow';
-        return 'red';
-      });
-    };
+    useEffect(() =>{
+        let timeout;
 
-    const redTime = 5000;     // 2 minutes
-    const yellowTime = 2000;   // 10 seconds
-    const greenTime = 5000;   // 3 minutes
+        if (light === 'red'){
+            timeout = setTimeout(() =>{
+                setlight('green')
+            },2000)
+        }
+        else if (light === 'green'){
+            timeout = setTimeout(() => {
+                setlight('yellow')
+            }, 2000);
+        }
+        else if (light === 'yellow'){
+            timeout = setTimeout(() => {
+                setlight('red')
+            }, 1000);
+        }
 
-    const time = currentLight === 'red' ? redTime
-               : currentLight === 'yellow' ? yellowTime
-               : greenTime;
-
-    timeout = setTimeout(changeLight, time);
-
-    return () => clearTimeout(timeout);
-  }, [currentLight]);
-
-  return (
-    <div className="traffic-light">
-      <div className={`light red ${currentLight === 'red' ? 'active' : ''}`}></div>
-      <div className={`light yellow ${currentLight === 'yellow' ? 'active' : ''}`}></div>
-      <div className={`light green ${currentLight === 'green' ? 'active' : ''}`}></div>
+        return () => clearTimeout(timeout)
+    },[light])
+  return(
+    <div className='traffic_light'>
+        <div className={`light red ${light === 'red' ? 'active': ''}`}></div>
+        <div className={`light yellow ${light === 'yellow' ? 'active':''}`}></div>
+        <div className={`light green ${light === 'green' ? 'active' : ''}`}ass></div>
     </div>
-  );
+  )
+  
 };
 
 export default TrafficLight;

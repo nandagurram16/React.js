@@ -1,59 +1,93 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './Otp.css';
 
-const Otp = () => {
-  const otp_count = 6;
-  const [input, setInput] = useState(new Array(otp_count).fill(''));
-  const inputRefs = useRef([]);
 
-  const handleChange = (value, index) => {
-    if (!/^[0-9]?$/.test(value)) return; // Only allow numeric input
+// functonlaties
+// 1.forwward functionality
+       //1.when no digit in th input.apply the new key in it and focus theimmideate next input
+      // 2. when input contains a digit.
+          //  a. if cursor is at rhe begining.then apply the new value and slide  its older value toward right
+          // b. if cursor is at the end apply the new value to the next input and may be focus on next to next input
+// 2.Backward functionality
+// 3Arrow functionality 
 
-    const newInput = [...input];
-    newInput[index] = value;
-    setInput(newInput);
+const Otp = ({ size = 6 }) => {
+  const [inputvalues, setInputValues] = useState(() => new Array(size).fill(''));
 
-    // Move focus to next input
-    if (value && index < otp_count - 1) {
-      inputRefs.current[index + 1].focus();
+  
+// taking callback function in side th usestate with new array and taking the size of whatever we r given size
+    // then fill with empty strings
+    // it creates the six length array
+
+  const focusNext = (currentInput) => {
+    currentInput?.nextElementSibling?.focus();
+  };
+
+  const focusPrevious = (currentInput) => {
+    currentInput?.previousElementSibling?.focus(); // ❌ typo: was "previoussibling"
+  };
+
+  const handleNumericInput = (event) => {
+    const inputValue = event.key;
+
+    if (!/^[0-9]$/.test(inputValue)) return;
+
+    const inputIndex = Number(event.target.id);
+
+    if (inputvalues[inputIndex].length === 0) {
+      setInputValues((prev) => {
+        const newValues = [...prev];
+        newValues[inputIndex] = inputValue;
+        return newValues;
+      });
+      focusNext(event.target);
     }
   };
 
-  const handleKeyDown = (e, index) => {
-    if (e.key === 'Backspace' && !input[index] && index > 0) {
-      const newInput = [...input];
-      newInput[index - 1] = '';
-      setInput(newInput);
-      inputRefs.current[index - 1].focus();
+  const handleBackspace = (event) => {
+    if (event.key === 'Backspace') { // ❌ typo: was 'backsoace'
+      const inputIndex = Number(event.target.id);
+      setInputValues((prev) => {
+        const newValues = [...prev];
+        newValues[inputIndex] = '';
+        return newValues;
+      });
+      focusPrevious(event.target);
     }
   };
 
-  const getOtpValue = () => {
-    return input.join('');
-  };
+  const handleArrows = (event) => {
+    if (event.key === 'ArrowRight'){
+      focusNext(event.target)
+    }
+    else if(event.key === 'ArrowLeft'){
+      focusPrevious(event.target);
+    }
+  }
 
-  const handleSubmit = () => {
-    alert('Entered OTP: ' + getOtpValue());
+  const handleKeyUp = (event) => {
+    handleNumericInput(event);
+    handleBackspace(event);
+    handleArrows(event)
   };
 
   return (
-    <div className='container'>
-      <h1>Validate OTP</h1>
-      <div className='otp-container'>
-        {input.map((value, index) => (
+    <div className="container">
+      <div className="otp_inputs">
+        {inputvalues.map((inputValue, index) => (
+          // rendering every element  of inputvalues
+          // here inputvalues are in inputvalue so the value should br inputvalue
+          // here converting each inputvalue of index into string
+          // if u given 3 inside the empty fill the whole inputvalues will fill with 3
           <input
             key={index}
-            className='otp'
-            type='text'
+            id={index.toString()}
+            value={inputValue}
+            onKeyUp={handleKeyUp}
             maxLength={1}
-            value={value}
-            onChange={(e) => handleChange(e.target.value, index)}
-            onKeyDown={(e) => handleKeyDown(e, index)}
-            ref={(el) => (inputRefs.current[index] = el)}
           />
         ))}
       </div>
-      <button className='submit-btn' onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
