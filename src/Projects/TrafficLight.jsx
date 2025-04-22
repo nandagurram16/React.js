@@ -30,7 +30,7 @@ const TrafficLight = () => {
     <div className='traffic_light'>
         <div className={`light red ${light === 'red' ? 'active': ''}`}></div>
         <div className={`light yellow ${light === 'yellow' ? 'active':''}`}></div>
-        <div className={`light green ${light === 'green' ? 'active' : ''}`}ass></div>
+        <div className={`light green ${light === 'green' ? 'active' : ''}`}></div>
     </div>
   )
   
